@@ -1,0 +1,26 @@
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
