@@ -1,0 +1,254 @@
+.user-form-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.user-form-header {
+    margin-bottom: 22px;
+}
+
+.back-button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #3478dc;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.user-form-header h1 {
+    margin: 12px 0 5px;
+    color: #172a4d;
+    font-size: 24px;
+}
+
+.user-form-header p {
+    margin: 0;
+    color: #7a879b;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   Messages
+======================================== */
+
+.form-message {
+    margin-bottom: 15px;
+    padding: 11px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.form-error {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #c24141;
+}
+
+.form-success {
+    border: 1px solid #bcebd4;
+    background: #effcf5;
+    color: #21865a;
+}
+
+
+/* ========================================
+   Card
+======================================== */
+
+.user-form-card {
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(31, 55, 90, 0.04);
+}
+
+.user-form-card form {
+    width: 100%;
+}
+
+
+/* ========================================
+   Section
+======================================== */
+
+.form-section {
+    padding: 24px;
+}
+
+.form-section-title {
+    margin-bottom: 22px;
+}
+
+.form-section-title h2 {
+    margin: 0 0 5px;
+    color: #344967;
+    font-size: 15px;
+}
+
+.form-section-title p {
+    margin: 0;
+    color: #8b97a9;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   Form Grid
+======================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    color: #4c5e78;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #e05252;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #dfe5ed;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    color: #334967;
+    font-size: 12px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #7ba9e9;
+    box-shadow: 0 0 0 3px rgba(52, 120, 220, 0.08);
+}
+
+.form-group input::placeholder {
+    color: #a0aaba;
+}
+
+.form-group select:disabled {
+    background: #f5f7fa;
+    cursor: not-allowed;
+}
+
+.form-group small {
+    margin-top: 5px;
+    color: #909bad;
+    font-size: 9px;
+}
+
+
+/* ========================================
+   Actions
+======================================== */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px 24px;
+    border-top: 1px solid #edf0f4;
+    background: #fbfcfe;
+    border-radius: 0 0 10px 10px;
+}
+
+.cancel-button,
+.save-button {
+    padding: 10px 17px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px solid #dfe5ed;
+    background: #ffffff;
+    color: #63728a;
+}
+
+.cancel-button:hover {
+    background: #f7f9fc;
+}
+
+.save-button {
+    border: none;
+    background: #3478dc;
+    color: #ffffff;
+}
+
+.save-button:hover {
+    background: #2869c7;
+}
+
+.save-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* ========================================
+   Loading
+======================================== */
+
+.form-loading {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #75839a;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 650px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        padding: 18px;
+    }
+
+    .form-actions {
+        padding: 15px 18px;
+    }
+
+    .cancel-button,
+    .save-button {
+        flex: 1;
+    }
+
+}

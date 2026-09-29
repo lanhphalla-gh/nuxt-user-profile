@@ -99,7 +99,7 @@ export const useLoginForm = () => {
             /**
              * Redirect the user to the dashboard.
              */
-            await navigateTo('/')
+            await navigateTo('/dashboard')
 
 
         } catch (error: any) {

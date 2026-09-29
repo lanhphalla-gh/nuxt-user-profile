@@ -12,25 +12,25 @@ export function useDashboardSidebar() {
         },
         {
             label: 'Users',
-            path: '/users',
+            path: '/user/user-list',
             icon: '👤',
             permission: 'VIEW_USER'
         },
         {
             label: 'Roles',
-            path: '/roles',
+            path: '/role/role-list',
             icon: '🛡',
             permission: 'VIEW_ROLE'
         },
         {
             label: 'Permissions',
-            path: '/permissions',
+            path: '/permission/permission-list',
             icon: '🔐',
             permission: 'VIEW_PERMISSION'
         },
         {
             label: 'Role Permission',
-            path: '/role-permissions',
+            path: '/role-permission/role-permission',
             icon: '⚙',
             permission: 'VIEW_ROLE_PERMISSION'
         }

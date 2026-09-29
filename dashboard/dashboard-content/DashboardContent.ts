@@ -148,29 +148,29 @@ export function useDashboardContent() {
     const quickActions = [
         {
             label: 'Add User',
-            description: 'Create a new user',
-            path: '/users',
+            description: 'Create a new user', 
+            path: '/users/user-list',
             icon: 'user',
             type: 'blue'
         },
         {
             label: 'Manage Roles',
             description: 'Create or update roles',
-            path: '/roles',
+            path: '/roles/role-list',
             icon: 'role',
             type: 'purple'
         },
         {
             label: 'Manage Permissions',
             description: 'Configure permissions',
-            path: '/permissions',
+            path: '/permissions/permission-list',
             icon: 'permission',
             type: 'green'
         },
         {
             label: 'Role Permission',
             description: 'Assign permissions to roles',
-            path: '/role-permissions',
+            path: '/role-permissions/role-permission',
             icon: 'assignment',
             type: 'orange'
         }

@@ -1,0 +1,244 @@
+.role-permission {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.role-permission-header {
+    margin-bottom: 24px;
+}
+
+.role-permission-header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 24px;
+}
+
+.role-permission-header p {
+    margin-top: 6px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.role-permission-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   Form Group
+========================= */
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group select:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   Permissions
+========================= */
+
+.permissions-section {
+    margin-top: 10px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 18px;
+}
+
+.section-header p {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.permission-count {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   Permission List
+========================= */
+
+.permission-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.permission-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.permission-item:hover {
+    border-color: #93c5fd;
+}
+
+.permission-item input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.permission-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.permission-info strong {
+    color: #111827;
+    font-size: 14px;
+}
+
+.permission-info span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================
+   Messages
+========================= */
+
+.message {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.loading,
+.empty-message,
+.select-role-message {
+    padding: 30px;
+    text-align: center;
+    color: #6b7280;
+}
+
+
+/* =========================
+   Actions
+========================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .role-permission-card {
+        padding: 18px;
+    }
+
+    .permission-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}

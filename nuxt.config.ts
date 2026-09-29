@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     '~/styles/dashboard/dashboard-header.css',
     '~/styles/dashboard/dashboard-sidebar.css',
     '~/styles/dashboard/dashboard-content.css',
-    '~/styles/dashboard/dashboard.css'
+    '~/styles/dashboard/dashboard.css',
+
+    '~/styles/user/user-form.css',
+    '~/styles/user/user-list.css',
+    '~/styles/user/user-view.css'
   ]
 })
