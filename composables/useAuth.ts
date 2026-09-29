@@ -1,7 +1,10 @@
+import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useAuthStore } from '~/stores/auth'
 
 export const useAuth = () => {
+
+  // Pinia is accessed when the composable is actually used
   const store = useAuthStore()
 
   const {
@@ -14,34 +17,19 @@ export const useAuth = () => {
     () => store.isAuthenticated
   )
 
-  const role = computed(
-    () => store.role
-  )
-
-  const permissions = computed(
-    () => store.permissions
-  )
-
-  const login = (
+  const login = async (
     username: string,
     password: string
   ) => {
-    return store.login(
+
+    await store.login(
       username,
       password
     )
   }
 
-  const logout = () => {
-    return store.logout()
-  }
-
-  const can = (
-    permission: string
-  ) => {
-    return permissions.value.includes(
-      permission
-    )
+  const logout = async () => {
+    await store.logout()
   }
 
   return {
@@ -49,10 +37,7 @@ export const useAuth = () => {
     loading,
     initialized,
     isAuthenticated,
-    role,
-    permissions,
     login,
-    logout,
-    can
+    logout
   }
 }

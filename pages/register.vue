@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import RegisterForm from '~/components/auth/RegisterForm.vue';
+import RegisterForm from '~/components/auth/register/RegisterForm.vue';
 
 
 definePageMeta({

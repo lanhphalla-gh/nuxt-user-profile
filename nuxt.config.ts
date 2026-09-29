@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 
   css: [
     '~/styles/login-form.css',
-    '~/styles/register.css'
+    '~/styles/register.css',
+    '~/styles/forgot-password.css'
   ]
 })

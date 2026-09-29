@@ -1,26 +1,455 @@
-.form-group {
-    margin-bottom: 15px;
+/* =========================================================
+   Register Form
+   ---------------------------------------------------------
+   Main container for the registration form.
+   ========================================================= */
+
+.register-form {
+    width: 100%;
 }
+
+
+/* =========================================================
+   Form Group
+   ---------------------------------------------------------
+   Controls the spacing between each form field.
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Form Label */
 
 .form-group label {
     display: block;
-    margin-bottom: 6px;
+
+    margin-bottom: 8px;
+
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 600;
 }
+
+
+/* =========================================================
+   Input
+   ---------------------------------------------------------
+   Common styling for username, password, and
+   confirm-password inputs.
+   ========================================================= */
 
 .form-group input {
     width: 100%;
-    padding: 10px;
+    height: 46px;
+
+    /* Input text spacing */
+    padding: 0 14px;
+
+    /* Prevent width from exceeding container */
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #111827;
+
+    font-size: 14px;
+
+    /* Remove browser default focus outline */
+    outline: none;
+
+    /* Smooth focus and hover effects */
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-button {
+
+/* Placeholder Text */
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Input Hover */
+
+.form-group input:hover {
+    border-color: #9ca3af;
+}
+
+
+/* Input Focus */
+
+.form-group input:focus {
+    border-color: #2563eb;
+
+    /* Blue focus ring */
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================================
+   Password Input
+   ---------------------------------------------------------
+   Used for password and confirm-password fields.
+   Provides space for the Show / Hide button.
+   ========================================================= */
+
+.password-input {
+    position: relative;
+}
+
+
+/*
+ * Add right padding because the Show / Hide button
+ * is positioned inside the input container.
+ */
+
+.password-input input {
+    padding-right: 70px;
+}
+
+
+/* =========================================================
+   Password Visibility Button
+   ---------------------------------------------------------
+   Controls the Show / Hide password action.
+   ========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    width: auto;
+    height: auto;
+
+    padding: 4px 6px;
+
+    /* Center button vertically */
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Password Button Hover */
+
+.password-toggle:hover {
+    color: #1d4ed8;
+}
+
+
+/* Password Button Keyboard Focus */
+
+.password-toggle:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   Password Validation Hint
+   ---------------------------------------------------------
+   Displays validation feedback such as:
+   "Passwords do not match."
+   ========================================================= */
+
+.password-hint {
+    margin-top: -10px;
+    margin-bottom: 15px;
+
+    font-size: 13px;
+}
+
+
+/* Validation Error Text */
+
+.error-text {
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   Message
+   ---------------------------------------------------------
+   Common layout for error and success messages.
+   ========================================================= */
+
+.message {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   Error Message
+   ========================================================= */
+
+.error-message {
+    border: 1px solid #fecaca;
+
+    background-color: #fef2f2;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   Success Message
+   ========================================================= */
+
+.success-message {
+    border: 1px solid #bbf7d0;
+
+    background-color: #f0fdf4;
+
+    color: #15803d;
+}
+
+
+/* =========================================================
+   Message Icon
+   ---------------------------------------------------------
+   Circular icon displayed before error/success text.
+   ========================================================= */
+
+.message-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Error Icon */
+
+.error-message .message-icon {
+    background-color: #dc2626;
+
+    color: #ffffff;
+}
+
+
+/* Success Icon */
+
+.success-message .message-icon {
+    background-color: #16a34a;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   Register Button
+   ---------------------------------------------------------
+   Main action button for submitting the registration form.
+   ========================================================= */
+
+.register-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
     width: 100%;
-    padding: 10px;
+    height: 46px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
 }
 
-.error {
-    color: red;
+
+/* Register Button Hover */
+
+.register-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.2);
 }
 
-.success {
-    color: green;
+
+/* Register Button Click */
+
+.register-button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+
+/* Register Button Keyboard Focus */
+
+.register-button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* Register Button Disabled */
+
+.register-button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   Loading Spinner
+   ---------------------------------------------------------
+   Displays while the registration request is processing.
+   ========================================================= */
+
+.loading-spinner {
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: register-spin 0.7s linear infinite;
+}
+
+
+/* Spinner Animation */
+
+@keyframes register-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   Login Link
+   ---------------------------------------------------------
+   Link displayed below the registration button.
+   Example:
+   "Already have an account? Login"
+   ========================================================= */
+
+.login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 20px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* Login Link */
+
+.login-link a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* Login Link Hover */
+
+.login-link a:hover {
+    color: #1d4ed8;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   Mobile Responsive Design
+   ---------------------------------------------------------
+   Adjusts spacing and control height for small screens.
+   Applies to screens 480px wide or smaller.
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Reduce spacing between form fields */
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+
+    /* Smaller input height */
+    .form-group input {
+        height: 44px;
+    }
+
+
+    /* Smaller button height */
+    .register-button {
+        height: 44px;
+    }
+
+
+    /* Smaller login text */
+    .login-link {
+        font-size: 12px;
+    }
+
 }
