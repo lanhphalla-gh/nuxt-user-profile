@@ -20,6 +20,10 @@ export default defineNuxtConfig({
   css: [
     '~/styles/login-form.css',
     '~/styles/register.css',
-    '~/styles/forgot-password.css'
+    '~/styles/forgot-password.css',
+    '~/styles/dashboard/dashboard-header.css',
+    '~/styles/dashboard/dashboard-sidebar.css',
+    '~/styles/dashboard/dashboard-content.css',
+    '~/styles/dashboard/dashboard.css'
   ]
 })

@@ -4,13 +4,11 @@ import { useAuthStore } from '~/stores/auth'
 
 export const useAuth = () => {
 
-  // Pinia is accessed when the composable is actually used
   const store = useAuthStore()
 
   const {
     user,
-    loading,
-    initialized
+    loading
   } = storeToRefs(store)
 
   const isAuthenticated = computed(
@@ -21,7 +19,6 @@ export const useAuth = () => {
     username: string,
     password: string
   ) => {
-
     await store.login(
       username,
       password
@@ -35,7 +32,6 @@ export const useAuth = () => {
   return {
     user,
     loading,
-    initialized,
     isAuthenticated,
     login,
     logout

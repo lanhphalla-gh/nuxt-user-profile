@@ -1,0 +1,145 @@
+/* =========================
+   Dashboard Header
+========================= */
+
+.dashboard-header {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-title h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header-title p {
+    margin: 2px 0 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   User Information
+========================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-role {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   Logout
+========================= */
+
+.logout-button {
+    padding: 8px 14px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #374151;
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+        padding: 0 16px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .user-details {
+        display: none;
+    }
+
+    .logout-button {
+        padding: 7px 10px;
+    }
+}

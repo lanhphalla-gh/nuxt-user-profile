@@ -5,8 +5,7 @@ import type { User } from '~/types/auth'
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     user: null as User | null,
-    loading: false,
-    initialized: false
+    loading: false
   }),
 
   getters: {
@@ -55,42 +54,8 @@ export const useAuthStore = defineStore('auth', {
         this.setUser(user)
 
         return response
+
       } finally {
-        this.loading = false
-      }
-    },
-
-    async initialize() {
-      if (this.initialized) {
-        return
-      }
-
-      this.loading = true
-
-      try {
-        const response =
-          await authService.me()
-
-        const data =
-          response.data ?? response
-
-        if (data.user) {
-          this.setUser({
-            ...data.user,
-            role:
-              data.role ??
-              data.user.role,
-
-            permissions:
-              data.permissions ??
-              data.user.permissions ??
-              []
-          })
-        }
-      } catch {
-        this.setUser(null)
-      } finally {
-        this.initialized = true
         this.loading = false
       }
     },
