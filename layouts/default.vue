@@ -1,128 +1,31 @@
-<template>
-  <div class="layout">
-
-    <header class="header">
-
-      <NuxtLink to="/">
-        <strong>
-          Nuxt User Profile
-        </strong>
-      </NuxtLink>
-
-      <div v-if="user">
-        <span>
-          {{ user.username }}
-        </span>
-
-        <button
-          @click="logout"
-          class="logout-btn"
-        >
-          Logout
-        </button>
-      </div>
-
-    </header>
-
-    <div class="body">
-
-      <aside class="sidebar">
-
-        <NuxtLink to="/">
-          Dashboard
-        </NuxtLink>
-
-        <NuxtLink to="/user">
-          User
-        </NuxtLink>
-
-        <NuxtLink to="/permission">
-          Permission
-        </NuxtLink>
-
-        <NuxtLink to="/role-permission">
-          Role-Permission
-        </NuxtLink>
-
-      </aside>
-
-      <main class="content">
-        <slot />
-      </main>
-
-    </div>
-
-  </div>
-</template>
-
 <script setup lang="ts">
-import { useAuth } from '~/composables/useAuth';
+import { ref } from 'vue'
 
+const isSidebarOpen = ref(false)
 
-const {
-  user,
-  logout
-} = useAuth()
+const toggleSidebar = () => {
+    isSidebarOpen.value = !isSidebarOpen.value
+}
 
+const closeSidebar = () => {
+    isSidebarOpen.value = false
+}
 </script>
 
-<style scoped>
-.layout {
-  min-height: 100vh;
-}
+<template>
+    <div class="app-layout">
 
-.header {
-  height: 64px;
+        <DashboardSidebar :is-open="isSidebarOpen" @close-sidebar="closeSidebar" />
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+        <div class="app-content">
 
-  padding: 0 24px;
+            <DashboardHeader @toggle-sidebar="toggleSidebar" />
 
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
+            <main>
+                <slot />
+            </main>
 
-.header div {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+        </div>
 
-.logout-btn {
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.body {
-  display: flex;
-  min-height: calc(100vh - 64px);
-}
-
-.sidebar {
-  width: 220px;
-  padding: 20px;
-
-  background: white;
-  border-right: 1px solid #ddd;
-}
-
-.sidebar a {
-  display: block;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 6px;
-}
-
-.sidebar a.router-link-active {
-  background: #eef4ff;
-}
-
-.content {
-  flex: 1;
-  padding: 25px;
-}
-</style>
+    </div>
+</template>

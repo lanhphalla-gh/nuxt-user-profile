@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import UserForm from '~/components/user/user-form/UserForm.vue';
+import UserForm from '~/components/user/UserForm.vue';
 
 
 definePageMeta({

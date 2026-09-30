@@ -1,14 +1,63 @@
 /* =========================
+   Dashboard Application Layout
+========================= */
+
+.app-layout {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f8fafc;
+}
+
+.app-content {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: 240px;
+}
+
+
+/* =========================
    Dashboard Sidebar
 ========================= */
 
 .dashboard-sidebar {
-    width: 240px;
+    position: fixed;
 
-    flex-shrink: 0;
+    top: 0;
+    left: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    box-sizing: border-box;
 
     background: #111827;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 1000;
 }
+
+.dashboard-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+    background: #374151;
+
+    border-radius: 999px;
+}
+
+
+/* =========================
+   Sidebar Logo
+========================= */
 
 .sidebar-logo {
     height: 72px;
@@ -18,7 +67,9 @@
 
     padding: 0 20px;
 
-    border-bottom: 1px solid #374151;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #1f2937;
 }
 
 .sidebar-logo h2 {
@@ -27,10 +78,18 @@
     color: #ffffff;
 
     font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
 }
 
+
+/* =========================
+   Sidebar Menu
+========================= */
+
 .sidebar-menu {
-    padding: 16px 10px;
+    padding: 18px 10px;
 }
 
 
@@ -44,37 +103,69 @@
 
     gap: 12px;
 
-    padding: 12px;
+    min-height: 44px;
 
-    margin-bottom: 4px;
+    box-sizing: border-box;
 
-    border-radius: 6px;
+    padding: 10px 12px;
 
-    color: #d1d5db;
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    color: #9ca3af;
 
     text-decoration: none;
 
-    transition: 0.2s;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .sidebar-item:hover {
     background: #1f2937;
+
     color: #ffffff;
+
+    transform: translateX(2px);
 }
 
 .sidebar-item-active {
     background: #2563eb;
+
     color: #ffffff;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
 }
 
+.sidebar-item-active:hover {
+    background: #2563eb;
+
+    transform: none;
+}
+
+
+/* =========================
+   Sidebar Icon
+========================= */
+
 .sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 24px;
+    min-width: 24px;
+
+    font-size: 16px;
 
     text-align: center;
 }
 
 .sidebar-label {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 
@@ -84,14 +175,12 @@
 
 @media (max-width: 768px) {
 
+    .app-content {
+        margin-left: 0;
+    }
+
     .dashboard-sidebar {
-        position: fixed;
-
-        top: 72px;
-        left: 0;
-        bottom: 0;
-
-        z-index: 100;
+        top: 0;
 
         transform: translateX(-100%);
 

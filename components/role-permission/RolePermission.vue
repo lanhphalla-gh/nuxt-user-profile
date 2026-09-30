@@ -2,7 +2,7 @@
 
 import {
     useRolePermission
-} from './RolePermission'
+} from '../../composables/role-permission/RolePermission'
 
 
 const {
@@ -145,7 +145,7 @@ const {
                         {{
                             selectedRoleId
                                 ? permissions.filter(
-                                    permission =>
+                                    (permission: { id: string; }) =>
                                         permission.id &&
                                         hasPermission(permission.id)
                                 ).length
@@ -175,8 +175,8 @@ const {
                     <label v-for="permission in permissions" :key="permission.id" class="permission-item">
 
                         <input type="checkbox" :checked="permission.id
-                                ? hasPermission(permission.id)
-                                : false
+                            ? hasPermission(permission.id)
+                            : false
                             " @change="
                                 permission.id &&
                                 togglePermission(permission.id)

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PermissionView from '~/components/permission/permission-view/PermissionView.vue';
+import PermissionView from '~/components/permission/PermissionView.vue';
 
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RoleForm from '~/components/role/role-form/RoleForm.vue';
+import RoleForm from '~/components/role/RoleForm.vue';
 
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PermissionList from '~/components/permission/permission-list/PermissionList.vue';
+import PermissionList from '~/components/permission/PermissionList.vue';
 
 </script>
 

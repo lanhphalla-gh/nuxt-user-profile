@@ -9,7 +9,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBaseUrl: 'https://spring-boot-user-profile-11.onrender.com/api'
+      //apiBaseUrl: 'https://spring-boot-user-profile-11.onrender.com/api'// Pro
+      apiBaseURL: 'http://localhost:8080/api'// Dev
     }
   },
 

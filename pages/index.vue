@@ -13,7 +13,7 @@
     <div class="cards">
 
       <NuxtLink
-        to="/user"
+        to="/user/user-list"
         class="card"
       >
         <h2>User</h2>
@@ -22,8 +22,18 @@
         </p>
       </NuxtLink>
 
+            <NuxtLink
+        to="/role/role-list"
+        class="card"
+      >
+        <h2>Role</h2>
+        <p>
+          Manage roles.
+        </p>
+      </NuxtLink>
+
       <NuxtLink
-        to="/permission"
+        to="/permission/permission-list"
         class="card"
       >
         <h2>Permission</h2>
@@ -33,7 +43,7 @@
       </NuxtLink>
 
       <NuxtLink
-        to="/role-permission"
+        to="/role-permission/role-permission"
         class="card"
       >
         <h2>Role-Permission</h2>

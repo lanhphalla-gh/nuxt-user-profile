@@ -1,33 +1,29 @@
+import type { Permission } from './permission'
+import type { Role } from './role'
+
 export interface User {
-  id?: string
-  username: string
-  role?: string
-  permissions?: string[]
+    id?: string
+    username: string
+    role?: Role
+    permissions?: Permission[]
 }
 
 export interface LoginRequest {
-  username: string
-  password: string
+    username: string
+    password: string
 }
 
 export interface RegisterRequest {
-  username: string
-  password: string
-  confirmPassword: string
+    username: string
+    password: string
+    confirmPassword: string
 }
 
 export interface LoginResponse {
-  status?: string
-  code?: number | string
-  message?: string
-
-  data?: {
-    user?: User
-    role?: string
-    permissions?: string[]
-  }
-
-  user?: User
-  role?: string
-  permissions?: string[]
+    status?: string
+    code?: number | string
+    message?: string
+    username?: string
+    role?: Role
+    permissions?: Permission[]
 }
